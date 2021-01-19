@@ -1,6 +1,6 @@
 # The Issue
 The issue is when we have a project that enables databinding and dynamic feature. 
-More specifically when we have a logic in our dfm layout that accesses some resources from application or library.  
+More specifically when we have a logic in our dfm layout that accesses some resources from application or library module.  
 See this `activity_dynamic.xml` example:  
 ``` xml
 <TextView
