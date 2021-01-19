@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.yeuristic.dynamicfeature.DynamicActivityViewModel" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".DynamicActivity">
+
+        <TextView
+            android:id="@+id/text_view_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@{viewModel.login ? @string/text_login : @string/text_logout}"/>
+<!--        <TextView-->
+<!--            android:id="@+id/text_view_greeting"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="16sp"-->
+<!--            android:text="@{viewModel.login ? textViewGreeting.getResources().getString(com.yeuristic.reproducedatabindingdfm.R.string.text_login) : textViewGreeting.getResources().getString(com.yeuristic.reproducedatabindingdfm.R.string.text_logout)}"/>-->
+
+        <Button
+            android:id="@+id/button_login_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.login ? @string/button_logout : @string/button_login}"/>
+    </LinearLayout>
+</layout>

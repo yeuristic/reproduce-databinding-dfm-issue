@@ -1,0 +1,4 @@
+<resources>
+    <string name="button_login">Login</string>
+    <string name="button_logout">Logout</string>
+</resources>
